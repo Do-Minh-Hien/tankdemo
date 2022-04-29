@@ -1,0 +1,7 @@
+/*Màn hình cảnh báo lỗi HỆ THỐNG*/
+#alarm_screen {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 1100px; height: 486px;
+    background-color: rgb(255, 255, 255); 
+}

@@ -1,0 +1,63 @@
+
+    <!--//////////////CODE CHO MÀN HÌNH CẢNH BÁO LỖI HỆ THỐNG////////////// -->
+    <div id = "graph_screen">
+        <!--REALTIME TREND 2 LINE--> 
+    <script>
+        //Lấy dữ liệu từ index gửi qua
+        var data_trend_1 = 0;
+        var data_trend_2 = 0;
+        // var data_trend_3 = 0;
+        socket.on("SP",function(data){
+            data_trend_1 = data;
+        });
+        socket.on("Level",function(data){
+            data_trend_2 = data;
+        });
+        // socket.on("MV",function(data){
+        //     data_trend_2 = data;
+        // });
+
+        //Add traces
+        Plotly.newPlot('graph_screen',[{
+            y:[data_trend_1],
+            name:'Line 0: SetPoint',
+            type:'line',
+            line: {
+                color: 'rgb(255, 0, 0)',
+                width: 5
+            }
+        }]);
+        Plotly.addTraces('graph_screen',[{
+            y:[data_trend_2],
+            name:'Line 1: PV',
+            type:'line',
+            line: {
+                color: 'rgb(0, 255, 0)',
+                width: 2
+            }
+        }]);
+        // Plotly.addTraces('graph_screen',[{
+        //     y:[data_trend_2],
+        //     name:'Line 1: PV',
+        //     type:'line',
+        //     line: {
+        //         color: 'rgb(0, 255, 0)',
+        //         width: 2
+        //     }
+        // }]);
+
+        //ExtendTrakes
+        var cnt = 0;
+        setInterval(function(){
+            Plotly.extendTraces('graph_screen',{ y:[[data_trend_1],[data_trend_2]]}, [0,1]);
+            cnt++;
+            if(cnt > 300) {
+                Plotly.relayout('graph_screen',{
+                    xaxis: {
+                        range: [cnt-300,cnt]
+                    }
+                });
+            }
+        },1000);
+    </script>
+    </div>

@@ -1,0 +1,74 @@
+
+<!-- //////////////CODE CHO MÀN HÌNH HIỂN THỊ DỮ LIỆU////////////// -->
+<div id = "display_screen">
+    <img src="images/display_screen.png">
+    <!-- <p>Đây là màn 2</p> -->
+    <!--Table display-->
+    <div id = "div_Table_01">
+        <table id="table_01" >
+            <thead>
+            <tr>
+                <th>Thời gian</th>
+                <th>SP</th>
+                <th>Level</th>
+                <th>Flow</th>
+                <th>Pressure</th>
+                <!-- <th>Dữ liệu String</th> -->
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+
+<!-- //////////////truy vấn dữ liệu cảm biến////////////// -->
+     <!--Date time piker-->
+     <label id="lb_Search_Start">Từ:</label>
+     <input id="dtpk_Search_Start" type="datetime-local">
+     <label id="lb_Search_End">Đến:</label>
+     <input id="dtpk_Search_End" type="datetime-local">
+     <!--Nút tìm kiếm-->
+     <button id="btt_Search" class="btn" onclick="fn_SQL_By_Time();
+     "></i> TÌM KIẾM</button>
+
+    <!--Nút Xuất Excel-->
+    <button id="btt_Excel" class="btn" onclick="fn_excel();
+    "></i> XUẤT DỮ LIỆU</button>
+
+    
+
+    <!-- ///////////////TẠO SLIDEBAR CHỨA CÁC Ô SP,KI,KP,KD /////////// -->
+    
+        <label id="lb_SP">SetPoint</label>
+        <label id="lb_KP">Kp</label>
+        <label id="lb_KI">Ki</label>
+        <label id="lb_KD">Kd</label>
+
+
+        <!--hiển thị KP-->
+        <!-- <label>Tag dạng bool:</label> -->
+        <input id="pid_KP" disabled="disabled" type="text" />
+        <script>fn_IOFieldDataShow("KP", "pid_KP", 4)</script>  
+
+        <!--hiển thị KI-->
+        <!-- <label>Tag dạng bool:</label> -->
+        <input id="pid_KI" disabled="disabled" type="text" />
+        <script>fn_IOFieldDataShow("KI", "pid_KI", 2)</script> 
+
+        <!--hiển thị KD-->
+        <!-- <label>Tag dạng bool:</label> -->
+        <input id="pid_KD" disabled="disabled" type="text" />
+        <script>fn_IOFieldDataShow("KD", "pid_KD", 2)</script> 
+
+        <!--Nút nhấn sửa/lưu - Lưu ý: Nút nhấn lưu phải nằm trước nút nhấn sửa--> 
+        <button id="btt_Display_Save" onclick= "fn_Display_SaveBtt()">LƯU</button> 
+        <button id="btt_Display_Edit" onclick= "fn_Display_EditBtt()">SỬA</button>
+
+        <!-- CÀI ĐẶT SETPOINT--> 
+        <!-- <label>Tag dạng byte:</label> -->
+        <input id="setpoint" disabled="disabled" type="text" />
+        <script>fn_scrDisplay_IOField_IO("SP", "setpoint", 0);</script>
+            
+    <script>fn_SQL_By_Time()</script>
+
+</div> 
+

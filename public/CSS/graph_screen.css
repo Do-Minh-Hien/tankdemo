@@ -1,0 +1,6 @@
+#graph_screen {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 1200px; height: 686px;
+    background-color: rgb(15, 228, 210); 
+}

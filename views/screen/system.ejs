@@ -1,0 +1,145 @@
+
+    <!-- //////////////CODE CHO MÀN HÌNH HỆ THỐNG////////////// -->
+    <div id = "system_screen">
+        <!-- //////////////tạo SYSMBOL////////////// -->
+        <img src="images/system_screen.png">
+        <!-- Tạo sysmbol motor -->
+        <img id = "system_screen_motor" ><script> fn_SymbolStatus("system_screen_motor", "motor", "Bom_Light") </script>
+        <!-- Tạo sysmbol flow -->
+        <img id = "system_screen_flow" ><script> fn_SymbolStatus("system_screen_flow", "flow", "Bom_Light") </script>
+        <!-- Tạo sysmbol solenoid valve -->
+        <img id = "system_screen_valve" ><script> fn_SymbolStatus("system_screen_valve", "van", "Van_Light") </script> 
+        <!-- Tạo sysmbol emergency light valve -->
+        <img id = "system_screen_light" ><script> fn_SymbolStatus("system_screen_light", "light", "Emergency_Light") </script>
+
+        <!-- //////////////tạo NÚT NHẤN////////////// -->
+        <!-- Nút nhấn START -->
+        <button id="btt_START_mode" onclick= "socket.emit('cmd_START', true);">START</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = XANH, Off = Nâu)
+            socket.on("Start_Light",function(data){
+            if(data == false){
+                document.getElementById('btt_START_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_START_mode').style.backgroundColor = 'rgb(15, 228, 61)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn STOP -->
+        <button id="btt_STOP_mode" onclick= "socket.emit('cmd_STOP', true);">STOP</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Stop_Light",function(data){
+            if(data == false){
+                document.getElementById('btt_STOP_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_STOP_mode').style.backgroundColor = 'rgb(255, 0, 0)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn EMERGENCY -->
+        <button id="btt_EMERGENCY_mode" onclick= "socket.emit('cmd_EMERGENCY', true);">EMERGENCY</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Emergency_Light",function(data){
+            if(data == false){
+                document.getElementById('btt_EMERGENCY_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_EMERGENCY_mode').style.backgroundColor = 'rgb(255, 0, 0)'; 
+            }
+            });
+        </script>
+
+         <!-- Nút nhấn RESET -->
+         <button id="btt_RESET_mode" onclick= "socket.emit('cmd_RESET', true);">RESET</button>
+         <script>
+             // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+             socket.on("Reset_Light",function(data){
+             if(data == false){
+                 document.getElementById('btt_RESET_mode').style.backgroundColor = 'gray';
+             } else{
+                 document.getElementById('btt_RESET_mode').style.backgroundColor = 'rgb(248, 241, 48)'; 
+             }
+             });
+         </script>
+
+        <!-- Nút nhấn AUTO -->
+        <button id="btt_AUTO_mode" onclick= "socket.emit('cmd_AUTO', true);">AUTO</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = XANH, Off = Nâu)
+            socket.on("Auto_mode",function(data){
+            if(data == false){
+                document.getElementById('btt_AUTO_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_AUTO_mode').style.backgroundColor = 'rgb(15, 228, 61)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn MAUNUAL -->
+        <button id="btt_MANUAL_mode" onclick= "socket.emit('cmd_MANUAL', true);">MANUAL</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Manual_mode",function(data){
+            if(data == false){
+                document.getElementById('btt_MANUAL_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_MANUAL_mode').style.backgroundColor = 'rgb(15, 228, 61)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn ON BƠM -->
+        <button id="btt_ON_BOM_mode" onclick= "socket.emit('cmd_ON_BOM', true);">ON</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Bom_Light_Man",function(data){
+            if(data == false){
+                document.getElementById('btt_ON_BOM_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_ON_BOM_mode').style.backgroundColor = 'rgb(15, 228, 61)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn OFF BƠM -->
+        <button id="btt_OFF_BOM_mode" onclick= "socket.emit('cmd_OFF_BOM', true);">OFF</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Bom_Light_off",function(data){
+            if(data == false){
+                document.getElementById('btt_OFF_BOM_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_OFF_BOM_mode').style.backgroundColor = 'rgb(255, 0, 0)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn ON VAN -->
+        <button id="btt_ON_VAN_mode" onclick= "socket.emit('cmd_ON_VAN', true);">ON</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Van_Light_Man",function(data){
+            if(data == false){
+                document.getElementById('btt_ON_VAN_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_ON_VAN_mode').style.backgroundColor = 'rgb(15, 228, 61)'; 
+            }
+            });
+        </script>
+
+        <!-- Nút nhấn OFF VAN -->
+        <button id="btt_OFF_VAN_mode" onclick= "socket.emit('cmd_OFF_VAN', true);">OFF</button>
+        <script>
+            // Hiển thị trạng thái nút nhấn (ON = đỏ, Off = Nâu)
+            socket.on("Van_Light_off",function(data){
+            if(data == false){
+                document.getElementById('btt_OFF_VAN_mode').style.backgroundColor = 'gray';
+            } else{
+                document.getElementById('btt_OFF_VAN_mode').style.backgroundColor = 'rgb(255, 0, 0)'; 
+            }
+            });
+        </script>
+</div>  

@@ -1,0 +1,200 @@
+/*Màn hình hiển thị dữ liệu HỆ THỐNG*/
+#display_screen {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 1200px; height: 686px;
+    background-color: rgb(15, 228, 210); 
+}
+/*//////////////Hiển thị dữ liệu bảng 1 - Start/////////////////*/
+#div_Table_01 {
+    position: absolute; 
+    left: 240px; top: 200px; 
+    width: 1000px; height: 400px;
+    overflow-y: scroll;
+}
+/*Table*/
+#table_01 {
+    position: absolute;  
+    width:100%;
+}
+#table_01 tr{
+    cursor: pointer;
+    
+}
+/* #table_01 tr:hover{background-color: rgb(156, 203, 248);;} */
+#table_01 tr:nth-child(even){background-color: #f8f8ff}
+#table_01   { overflow: auto; }
+#table_01 thead th { position: sticky; top: 0;  }
+/* Just common table stuff. Really. */
+#table_01  { border-collapse: collapse; width: 100%; }
+#table_01 th, td { padding: 8px 16px;text-align: center;border: 1px solid; }
+#table_01 th     { background:rgb(178, 223, 42); }
+/*//////////////Hiển thị dữ liệu bảng 1 - end/////////////////*/
+
+/*KP*/
+#pid_KP {
+    position: absolute; 
+    left: 120px; top: 70px; 
+    width: 95px; height: 35px;
+     
+}
+
+/*KI*/
+#pid_KI {
+    position: absolute; 
+    left: 120px; top: 115px;  
+    width: 95px; height: 35px;
+     
+}
+
+/*KD*/
+#pid_KD {
+    position: absolute; 
+    left: 120px; top: 160px;  
+    width: 95px; height: 35px;
+     
+}
+
+
+/*setpoint*/
+#setpoint {
+    position: absolute; 
+    left: 120px; top: 25px;
+    width: 95px; height: 35px;
+     
+}
+
+/*Nút nhấn LƯU*/
+#btt_Display_Save {
+    border: outset; 
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 100px; height: 40px; 
+    left: 70px; top: 210px;
+}
+
+/*Nút nhấn SỬA*/
+#btt_Display_Edit  {
+    border: outset; 
+    background-color: rgb(255, 0, 0); 
+    color: rgb(255, 255, 255);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 13px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 100px; height: 40px; 
+    left: 70px; top: 210px;
+}
+
+/*//////////////TRƯỜNG TÌM KIẾM DỮ LIỆU/////////////////*/
+/*Lable tìm kiếm từ*/
+#lb_Search_Start {
+    color: rgb(26, 24, 24);   
+    font-size: 20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: 350px; top: 80px;
+}
+/*Chọn ngày tháng bắt đầu*/
+#dtpk_Search_Start {
+    text-align: left; 
+    position: absolute; 
+    left: 390px; top: 80px; 
+}
+ 
+/*Lable tìm kiếm đến*/
+#lb_Search_End {
+    color: rgb(26, 24, 24);  
+    font-size: 20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: 590px; top: 80px;
+}
+/*Chọn ngày tháng kết thúc*/
+#dtpk_Search_End {
+    text-align: left; 
+    position: absolute; 
+    left: 640px; top: 80px; 
+}
+/*Nút tìm kiếm*/
+#btt_Search {
+    border: outset; 
+    background-color: DodgerBlue; 
+    color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 11px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 105px; height: 30px; 
+    left: 850px; top: 75px;
+}
+/*//////////////TRƯỜNG TÌM KIẾM DỮ LIỆU - END/////////////////*/
+
+/*Nút Xuaast Excel*/
+#btt_Excel {
+    border: outset; 
+    background-color: rgb(14, 199, 153); 
+    color: rgb(255, 255, 255);  
+    text-align: center; 
+    display: inline-block;
+    font-size: 11px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 105px; height: 30px; 
+    left: 980px; top: 75px;
+}
+
+/*Lable setpoint*/
+#lb_SP {
+    color: rgb(26, 24, 24);   
+    font-size:20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: -780px; top: 30px;
+}
+
+/*Lable KP*/
+#lb_KP {
+    color: rgb(26, 24, 24);   
+    font-size: 20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: -780px; top: 80px;
+}
+
+/*Lable KI*/
+#lb_KI {
+    color: rgb(26, 24, 24);   
+    font-size: 20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: -780px; top: 130px;
+}
+
+/*Lable KD*/
+#lb_KD {
+    color: rgb(26, 24, 24);   
+    font-size: 20px; 
+    font-weight: bold;
+    position: absolute; 
+    left: -780px; top: 180px;
+}
+
+/* Màn hình 2
+#Screen_2 {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 800px; height: 686px;
+    background-color: rgb(15, 228, 210); 
+} */

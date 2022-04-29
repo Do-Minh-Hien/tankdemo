@@ -1,0 +1,95 @@
+<html>
+    <!-- Phần header của website -->  
+    <head>
+
+        <!-- ////////////// GỌI CÁC CSS //////////////  -->
+        <link rel="stylesheet" href= "CSS/slidebar.css">
+        <link rel="stylesheet" href= "CSS/main_screen.css">
+        <link rel="stylesheet" href= "CSS/system_screen.css">
+        <link rel="stylesheet" href= "CSS/display_screen.css">
+        <link rel="stylesheet" href= "CSS/graph_screen.css">
+        <link rel="stylesheet" href= "CSS/alarm_screen.css">
+        <link rel="stylesheet" href= "CSS/login.css">
+
+        <!-- ////////////// CHƯƠNG TRÌNH HỆ THỐNG //////////////  -->
+        <title>Scada giám sát Bồn nước IOT trên internet</title>
+        <!-- <script src = "jquery.js"></script> -->
+        <script src = "js/jquery-3.6.0.min.js"></script>
+        <script src = "js/FileSaver.js"></script>
+        <script src = "js/plotly-2.8.3.min.js"></script>
+        <script src = "js/FC1_Common.js"></script>
+        <script src = "js/FC2_UserManagement.js"></script>
+        <script src = "js/FC3_MainScreen.js"></script>
+        <!-- <script src = "js/FC4_Screen1.js"></script>
+        <script src = "js/FC5_Screen2.js"></script> -->
+        <script src = "js/FC4_DisplayScreen.js"></script>
+        <script src = "js/FC5_Excel_Export.js"></script>
+        <script src = "socket.io/socket.io.js"></script>  
+        <script>
+            var socket = io("localhost:3000"); // IP tĩnh (hoặc IP động, hoặc localhost)
+            // var socket = io("https://do-minh-hien.github.io/iottank/"); // IP tĩnh (hoặc IP động, hoặc localhost)
+        </script>
+
+    <!-- ////////////// CHƯƠNG TRÌNH ĐĂNG NHẬP HỆ THỐNG //////////////  -->
+    <!-- <div id="div_login">
+        <div id="id01" class="modal">
+            <form id = "modal-content1" class="modal-content animate">
+            <div id = "img_container" class="imgcontainer">
+                <span id = "closebtt" onclick="document.getElementById('id01').style.display='none'; logout();" class="close" title="Close Modal">&times;</span>
+                <img id = "img_avatar" src="images/user.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div id = "log_container" class="container">
+                <label for="uname"><b>Username</b></label>
+                <input id = "inputuser" type="text" placeholder="Enter Username" name="uname" required>
+        
+                <label for="psw"><b>Password</b></label>
+                <input id = "inputpass" type="password" placeholder="Enter Password" name="psw" required>
+                
+                <button id = "bttlogin1" type="button" onclick="login();">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+        
+            <div id = "login_container" class="container" style="background-color:#f1f1f1">
+                <button id = "bttcancle" type="button" onclick="document.getElementById('id01').style.display='none'; logout();" class="cancelbtn">Cancel</button>
+                <span id = "psw" class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            </form>
+        </div>
+    </div> -->
+ 
+    </head>
+    
+    <body>
+        
+        <!-- //////////////////////////// CODE CHO SILDEBAR//////////////////////////// -->
+        <div id = "slidebar">
+            <!--Nút chọn màn hình chính-->
+            <button id="btt_main_screen"  onclick="window.location.href='/'">MAIN_SCREEN</button>
+            <!--Nút chọn màn hình hiển thị hệ thống-->
+            <button id="btt_system_screen" onclick="window.location.href='/system'">SYSTEM_SCREEN</button>
+
+            <!--Nút chọn màn hình hiển thị dữ liệu của hệ thống-->
+            <button id="btt_display_screen" onclick="window.location.href='/display'">DISPLAY_SCREEN</button>  
+
+            <!--Nút chọn màn hình hiển thị đồ thị hệ thống-->
+            <button id="btt_graph_screen" onclick="window.location.href='/graph'">GRAPH_SCREEN</button> 
+
+            <!--Nút chọn màn hình hiển thị dữ liệu của hệ thống-->
+            <button id="btt_alarm_screen" onclick="window.location.href='/alarm'">ALARM_SCREEN</button>  
+
+            <!--Nút đăng nhập/đăng xuất-->
+            <button id="bttLogin" class="btn" onclick="login();
+            window.location.reload();
+            ">ĐĂNG NHẬP</button>
+            <button id="bttLogout" class="btn" onclick="logout();
+            ">ĐĂNG XUẤT</button>
+        </div>
+
+        <%- include(screenurl)%>
+
+    </body>
+
+</html>

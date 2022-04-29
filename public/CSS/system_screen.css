@@ -1,0 +1,191 @@
+
+/*Màn hình HỆ THỐNG*/
+#system_screen {
+    position: absolute; 
+    left: 215px; top: 11px; 
+    width: 800px; height: 686px;
+    /* background-color: rgb(15, 228, 210);  */
+}
+
+/*motor*/
+#system_screen_motor {
+    position: absolute; 
+    left: 755px; top: 545px; 
+    width: 170px; height: 110px;
+    
+}
+
+/*flow*/
+#system_screen_flow {
+    position: absolute; 
+    left: 751px; top: 323px; 
+    width: 60px; height: 98px;
+     
+}
+
+/*van solenoid*/
+#system_screen_valve {
+    position: absolute; 
+    left: 95px; top: 343px; 
+    width: 80px; height: 60px;
+     
+}
+
+/*light*/
+#system_screen_light {
+    position: absolute; 
+    left: 1170px; top: 285px; 
+    width: 80px; height: 80px;
+     
+}
+
+/*Nút nhấn START*/
+#btt_START_mode {
+    border: outset; 
+    /* border-radius: 12px; */
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 120px; height: 40px; 
+    left: 970px; top: 160px;
+}
+
+/*Nút nhấn STop*/
+#btt_STOP_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 120px; height: 40px; 
+    left: 1130px; top: 160px;
+}
+
+/*Nút nhấn EMERGENCY*/
+#btt_EMERGENCY_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 150px; height: 55px; 
+    left: 970px; top: 300px;
+}
+
+/*Nút nhấn RESET*/
+#btt_RESET_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 120px; height: 45px; 
+    left: 1050px; top: 230px;
+}
+
+/*Nút nhấn AUTO*/
+#btt_AUTO_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 120px; height: 40px; 
+    left: 970px; top: 90px;
+}
+
+/*Nút nhấn MANUAL*/
+#btt_MANUAL_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 120px; height: 40px; 
+    left: 1130px; top: 90px;
+}
+
+/*Nút nhấn ON BOM*/
+#btt_ON_BOM_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 60px; height: 45px; 
+    left: 1090px; top: 490px;
+}
+
+/*Nút nhấn OFF BOM*/
+#btt_OFF_BOM_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 60px; height: 45px; 
+    left: 1170px; top: 490px;
+}
+
+/*Nút nhấn ON VAN*/
+#btt_ON_VAN_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 60px; height: 45px; 
+    left: 1090px; top: 596px;
+}
+
+/*Nút nhấn OFF VAN*/
+#btt_OFF_VAN_mode {
+    border: outset; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);   
+    text-align: center; 
+    display: inline-block;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; 
+    width: 60px; height: 45px; 
+    left: 1170px; top: 596px;
+}
